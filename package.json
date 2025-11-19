@@ -1,0 +1,25 @@
+{
+    "name": "com.naipa.uitoolbar",
+    "version": "1.0.0",
+    "displayName": "Unity UI Toolbar",
+    "description": "A powerful UI toolbar extension for Unity Editor, providing quick alignment, grouping, and component creation features for the Scene view.",
+    "unity": "2019.4",
+    "keywords": [
+        "unity",
+        "unity3d",
+        "ui",
+        "toolkit",
+        "toolbar",
+        "alignment",
+        "scene"
+    ],
+    "homepage": "https://github.com/Naipa-Games/unity-ui-toolbar",
+    "documentationUrl": "https://github.com/Naipa-Games/unity-ui-toolbar",
+    "author": {
+        "name": "Naipa Games",
+        "url": "https://github.com/Naipa-Games"
+    },
+    "license": "MIT",
+    "dependencies": {},
+    "hideInEditor": false
+}
