@@ -32,15 +32,19 @@ namespace Naipa.UIToolbar.Editor.Overlay.Group
 
             Undo.RecordObjects(rects.Cast<Object>().ToArray(), "Uniform Column Spacing");
 
-            var currentX = rects[0].localPosition.x;
+            var first = rects[0];
+            var prevRight = first.localPosition.x + first.rect.width * (1f - first.pivot.x);
 
-            foreach (var rt in rects)
+            for (var i = 1; i < rects.Length; i++)
             {
-                var width = rt.rect.width;
+                var rt = rects[i];
                 var pos = rt.localPosition;
-                pos.x = currentX;
+
+                var desiredLeft = prevRight + spacing;
+                pos.x = desiredLeft + rt.rect.width * rt.pivot.x;
                 rt.localPosition = pos;
-                currentX += width + spacing;
+
+                prevRight = pos.x + rt.rect.width * (1f - rt.pivot.x);
             }
         }
     }
