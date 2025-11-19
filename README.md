@@ -2,6 +2,8 @@
 
 A powerful UI toolbar extension for Unity Editor, providing quick alignment, grouping, and component creation features for the Scene view.
 
+<img width="552" height="130" alt="Preview" src="https://github.com/user-attachments/assets/05ccf36f-149a-4fe9-b1d6-b821a9c7f590" />
+
 ## ✨ Features
 
 ### 🎯 UI Alignment Toolbar
@@ -58,6 +60,8 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
    - **UI Alignment Toolbar** - Alignment and grouping tools
    - **UI Component Toolbar** - Component creation tools
 
+![OverlayMenu](https://github.com/user-attachments/assets/4099bf34-a53c-4a48-83a1-cfb26e9532d5)
+
 ### Using Grouping Features
 
 **Create Group:**
@@ -70,6 +74,8 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
 2. Click the Ungroup button
 3. Child objects will be moved to the group's parent level, and the group object will be deleted
 
+![Group](https://github.com/user-attachments/assets/fadb4b58-87bd-42a1-878a-ba7f0ee55dc2)
+
 ### Aligning UI Elements
 
 **Single Object:**
@@ -80,6 +86,8 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
 - Select multiple RectTransform objects
 - Click an alignment button to align all objects relative to the first selected object
 
+![Alignment](https://github.com/user-attachments/assets/727031a0-7b24-4942-8efc-58f305ef1571)
+
 ### Using Spacing Features
 
 **Uniform Row/Column Spacing:**
@@ -87,6 +95,8 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
 2. Click the spacing button to open the settings window
 3. Set the spacing value (in pixels)
 4. Click Apply to apply
+
+![RowColumnSpacing](https://github.com/user-attachments/assets/f4a89ee6-1717-4793-b05b-0a868ee4d517)
 
 ### Using Grid Layout
 
@@ -99,10 +109,14 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
    - Vertical spacing
 4. Click Apply to apply the layout
 
+![GridLayout](https://github.com/user-attachments/assets/73e15bbe-861e-48b7-b1e3-b92b26d198e4)
+
 ### Creating UI Components
 
 1. Select a Canvas or UI parent object in the Hierarchy. If nothing is selected, Canvas will be used as the parent.
 2. Click the corresponding component button in the Component Toolbar, then click in the scene area to create.
+
+![UIComponents](https://github.com/user-attachments/assets/7f3254ab-49ed-43cb-ad13-bd201f5eaf09)
 
 ## License
 
