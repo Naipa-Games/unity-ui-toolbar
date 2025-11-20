@@ -7,7 +7,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     namespace Naipa.UIToolbar.Editor.Overlay.Alignment
     {
         [EditorToolbarElement(ID, typeof(SceneView))]
-        public class UIScrollbarToggle : UIBaseToggle
+        public class UIScrollbarToggle : UIToolbarToggleBase
         {
             internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIScrollbarToggle);
 
@@ -17,7 +17,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
                 tooltip = "Create Scrollbar";
             }
 
-            protected override GameObject GetPlacementObject()
+            public override GameObject GetPlacementObject()
             {
                 return CreateUGUIObject("Scrollbar");
             }

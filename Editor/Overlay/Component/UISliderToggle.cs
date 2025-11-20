@@ -7,7 +7,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     namespace Naipa.UIToolbar.Editor.Overlay.Alignment
     {
         [EditorToolbarElement(ID, typeof(SceneView))]
-        public class UISliderToggle : UIBaseToggle
+        public class UISliderToggle : UIToolbarToggleBase
         {
             internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UISliderToggle);
 
@@ -17,7 +17,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
                 tooltip = "Create Slider";
             }
 
-            protected override GameObject GetPlacementObject()
+            public override GameObject GetPlacementObject()
             {
                 return CreateUGUIObject("Slider");
             }

@@ -1,59 +1,18 @@
 using UnityEditor;
-using UnityEditor.Toolbars;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 namespace Naipa.UIToolbar.Editor.Overlay.Component
 {
-    public abstract class UIBaseToggle : EditorToolbarToggle
+    public static class UIToolbarToggleEditor
     {
-        private static UIBaseToggle sCurrentToggle;
-
-        protected UIBaseToggle()
-        {
-            this.RegisterValueChangedCallback(OnValueChanged);
-        }
-
-        ~UIBaseToggle()
-        {
-            this.UnregisterValueChangedCallback(OnValueChanged);
-        }
-
-        protected abstract GameObject GetPlacementObject();
+        private static IUIToolbarToggle sCurrentToggle;
         
-        protected static GameObject CreateUGUIObject(string menuPath)
-        {
-            EditorApplication.ExecuteMenuItem($"GameObject/UI/{menuPath}");
-            return Selection.activeGameObject;
-        }
-        
-        protected static GameObject CreateUGUILegacyObject(string menuPath, bool useTextMeshPro = false)
-        {
-            if (useTextMeshPro && System.Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro") != null)
-            {
-                if (EditorApplication.ExecuteMenuItem($"GameObject/UI/{menuPath} - TextMeshPro"))
-                    return Selection.activeGameObject;
-            }
-
-#if UNITY_2021_1_OR_NEWER
-            EditorApplication.ExecuteMenuItem($"GameObject/UI/Legacy/{menuPath}");
-#else
-            EditorApplication.ExecuteMenuItem($"GameObject/UI/{menuPath}");
-#endif
-            return Selection.activeGameObject;
-        }
-
-        private void OnValueChanged(ChangeEvent<bool> evt)
-        {
-            OnToggleChanged(this, evt.newValue);
-        }
-
-        private static void OnToggleChanged(UIBaseToggle target, bool value)
+        public static void OnToggleChanged(IUIToolbarToggle target, bool value)
         {
             if (sCurrentToggle != target)
             {
-                sCurrentToggle?.SetValueWithoutNotify(false);
+                sCurrentToggle?.SetValue(false);
                 sCurrentToggle = target;
             }
 
@@ -81,7 +40,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
 
         private static void ClearPlacingMode()
         {
-            sCurrentToggle.SetValueWithoutNotify(false);
+            sCurrentToggle.SetValue(false);
             sCurrentToggle = null;
             StopPlacingMode();
             SceneView.RepaintAll();

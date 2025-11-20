@@ -7,17 +7,17 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     namespace Naipa.UIToolbar.Editor.Overlay.Alignment
     {
         [EditorToolbarElement(ID, typeof(SceneView))]
-        public class UIToggleToggle : UIBaseToggle
+        public class UIToggleToolbar : UIToolbarToggleBase
         {
-            internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIToggleToggle);
+            internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIToggleToolbar);
 
-            public UIToggleToggle()
+            public UIToggleToolbar()
             {
                 icon = EditorUtilities.GetIcon("ui_toggle");
                 tooltip = "Create Toggle";
             }
 
-            protected override GameObject GetPlacementObject()
+            public override GameObject GetPlacementObject()
             {
                 return CreateUGUIObject("Toggle");
             }

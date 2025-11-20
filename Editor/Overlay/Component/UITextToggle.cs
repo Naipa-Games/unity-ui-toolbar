@@ -7,7 +7,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     namespace Naipa.UIToolbar.Editor.Overlay.Alignment
     {
         [EditorToolbarElement(ID, typeof(SceneView))]
-        public class UITextToggle : UIBaseToggle
+        public class UITextToggle : UIToolbarToggleBase
         {
             internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UITextToggle);
 
@@ -17,7 +17,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
                 tooltip = "Create Text";
             }
 
-            protected override GameObject GetPlacementObject()
+            public override GameObject GetPlacementObject()
             {
                 return CreateUGUILegacyObject("Text", true);
             }

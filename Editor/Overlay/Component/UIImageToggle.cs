@@ -7,7 +7,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     namespace Naipa.UIToolbar.Editor.Overlay.Alignment
     {
         [EditorToolbarElement(ID, typeof(SceneView))]
-        public class UIImageToggle : UIBaseToggle
+        public class UIImageToggle : UIToolbarToggleBase
         {
             internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIImageToggle);
 
@@ -18,7 +18,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
                 tooltip = "Create Image";
             }
 
-            protected override GameObject GetPlacementObject()
+            public override GameObject GetPlacementObject()
             {
                 return CreateUGUIObject("Image");
             }

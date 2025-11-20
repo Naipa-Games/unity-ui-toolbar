@@ -28,9 +28,10 @@ namespace Naipa.UIToolbar.Editor.Overlay
             UITextToggle.ID,
             UIInputFieldToggle.ID,
             UIButtonToggle.ID,
-            UIToggleToggle.ID,
+            UIToggleToolbar.ID,
             UISliderToggle.ID,
-            UIScrollbarToggle.ID
+            UIScrollbarToggle.ID,
+            UIScrollViewToggle.ID
         )
         {
         }

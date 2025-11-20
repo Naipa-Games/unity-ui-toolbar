@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Naipa.UIToolbar.Editor.Overlay.Component
 {
     [EditorToolbarElement(ID, typeof(SceneView))]
-    public class UIInputFieldToggle : UIBaseToggle
+    public class UIInputFieldToggle : UIToolbarToggleBase
     {
         internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIInputFieldToggle);
         
@@ -16,7 +16,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
             tooltip = "Create Input Field";
         }
         
-        protected override GameObject GetPlacementObject()
+        public override GameObject GetPlacementObject()
         {
             return CreateUGUILegacyObject("Input Field", true);
         }
