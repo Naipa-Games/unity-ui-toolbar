@@ -37,6 +37,7 @@ Supported Components:
 - **Toggle** - Toggle component
 - **Slider** - Slider component
 - **Scrollbar** - Scrollbar component
+- **Scroll View** - Scroll Rect component, including grid layout, horizontal layout and vertical layout.
 
 ## 📦 Installation
 
