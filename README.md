@@ -2,7 +2,7 @@
 
 A powerful UI toolbar extension for Unity Editor, providing quick alignment, grouping, and component creation features for the Scene view.
 
-<img width="552" height="130" alt="Preview" src="https://github.com/user-attachments/assets/05ccf36f-149a-4fe9-b1d6-b821a9c7f590" />
+<img width="521" height="206" alt="image" src="https://github.com/user-attachments/assets/a0b327f2-ae27-4d23-846d-74ce8137c7f6" />
 
 ## ✨ Features
 
@@ -113,10 +113,11 @@ You can add `https://github.com/Naipa-Games/unity-ui-toolbar.git` to the Package
 
 ### Creating UI Components
 
-1. Select a Canvas or UI parent object in the Hierarchy. If nothing is selected, Canvas will be used as the parent.
-2. Click the corresponding component button in the Component Toolbar, then click in the scene area to create.
+1. Select a Canvas or UI parent object in the Hierarchy.
+2. If nothing is selected, Canvas will be used as the parent.
+3. Click the corresponding component button in the Component Toolbar, then click in the scene area to create.
 
-![UIComponents](https://github.com/user-attachments/assets/7f3254ab-49ed-43cb-ad13-bd201f5eaf09)
+![UIComponents](https://github.com/user-attachments/assets/d5bf2ffd-e92d-485d-abff-39acef897cb5)
 
 ## License
 
