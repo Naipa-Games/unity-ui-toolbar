@@ -12,7 +12,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
         [EditorToolbarElement(ID, typeof(SceneView))]
         public class UIScrollViewToggle : EditorToolbarDropdownToggle, IUIToolbarToggle
         {
-            internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIScrollViewToggle);
+            internal const string ID = SceneUIComponentToolbar.ID + "." + nameof(UIScrollViewToggle);
 
             private const float kDefaultSpacing = 10f;
             private static readonly Vector2 kDefaultSize = new(240, 400);

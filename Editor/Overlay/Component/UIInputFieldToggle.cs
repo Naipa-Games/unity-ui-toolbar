@@ -7,7 +7,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
     [EditorToolbarElement(ID, typeof(SceneView))]
     public class UIInputFieldToggle : UIToolbarToggleBase
     {
-        internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIInputFieldToggle);
+        internal const string ID = SceneUIComponentToolbar.ID + "." + nameof(UIInputFieldToggle);
         
         public UIInputFieldToggle()
         {

@@ -9,7 +9,7 @@ namespace Naipa.UIToolbar.Editor.Overlay.Component
         [EditorToolbarElement(ID, typeof(SceneView))]
         public class UIButtonToggle : UIToolbarToggleBase
         {
-            internal const string ID = SceneUIAlignmentToolbar.ID + "." + nameof(UIButtonToggle);
+            internal const string ID = SceneUIComponentToolbar.ID + "." + nameof(UIButtonToggle);
 
             public UIButtonToggle()
             {
